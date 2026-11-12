@@ -4,114 +4,385 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Smart Finance - Privacy Policy</title>
+<title>Smart Financial Calculator - Privacy Policy</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#091B27;color:#EAF2F5;font-family:Arial,sans-serif;line-height:1.7}
-main{max-width:850px;margin:35px auto;padding:24px}
-header,.content{background:#102936;border:1px solid #244452;border-radius:16px;padding:24px;margin-bottom:18px}
-h1{color:#35D39A;margin:0}
-h2{color:#35D39A;margin-top:26px}
-p,li{color:#D1DEE4}
-a{color:#65C9FF}
-button{background:#35D39A;color:#09231D;border:0;border-radius:9px;padding:11px 20px;font-weight:bold;margin:5px;cursor:pointer}
-.small{color:#A9BBC4;font-size:14px}
-[hidden]{display:none}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #091B27;
+    color: #EAF2F5;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+main {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 24px;
+}
+
+header, .content {
+    background: #102936;
+    border: 1px solid #244452;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    color: #35D39A;
+    margin: 0;
+}
+
+h2 {
+    color: #35D39A;
+    margin-top: 26px;
+}
+
+p, li {
+    color: #D1DEE4;
+}
+
+a {
+    color: #65C9FF;
+}
+
+button {
+    background: #35D39A;
+    color: #09231D;
+    border: 0;
+    border-radius: 9px;
+    padding: 11px 20px;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.small {
+    color: #A9BBC4;
+    font-size: 14px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media(max-width:600px) {
+    main {
+        margin: 10px auto;
+        padding: 12px;
+    }
+
+    header, .content {
+        padding: 18px;
+    }
+}
 </style>
 </head>
+
 <body>
+
 <main>
+
 <header>
-<h1>Smart Finance</h1>
-<p>Privacy Policy / गोपनीयता नीति</p>
-<button onclick="show('en')">English</button>
-<button onclick="show('hi')">हिन्दी</button>
-<p class="small">Last Updated: November 12, 2026</p>
+    <h1>Smart Financial Calculator</h1>
+    <p>Privacy Policy / गोपनीयता नीति</p>
+
+    <button type="button" onclick="show('en')">English</button>
+    <button type="button" onclick="show('hi')">हिन्दी</button>
+
+    <p class="small">Last Updated: November 12, 2026</p>
 </header>
 
+<!-- ENGLISH PRIVACY POLICY -->
+
 <section id="en" class="content">
+
 <h2>1. Introduction</h2>
-<p>Smart Finance respects your privacy. This Privacy Policy explains how the app handles information when you use its calculators and other features.</p>
+
+<p>
+Smart Financial Calculator respects your privacy.
+This Privacy Policy explains how the app handles
+information when you use its calculators and other features.
+</p>
 
 <h2>2. Information We Process</h2>
-<p>Calculator inputs and financial values are processed locally on your device. The app does not transmit these calculator inputs to our servers or to the currency-rate provider.</p>
-<p>The app does not provide calculation history or cloud backup and restore features.</p>
+
+<p>
+Calculator inputs and financial values are processed
+locally on your device. The app does not transmit
+these calculator inputs to us or to the currency-rate provider.
+</p>
+
+<p>
+The app does not provide Calculation History or
+Cloud Backup and Restore features.
+</p>
 
 <h2>3. Currency Converter and Third-Party Service</h2>
-<p>The Currency Converter uses ExchangeRate-API Open Access to retrieve exchange rates. It sends the selected base currency code in an internet request to:</p>
-<p><a href="https://open.er-api.com" target="_blank" rel="noopener">https://open.er-api.com</a></p>
-<p>The API provider may receive your IP address and technical request information as part of providing the service. The app does not send your calculator inputs or personal financial calculations to this provider.</p>
-<p>Exchange rates are cached locally on your device for up to 24 hours and may be used when the internet is unavailable.</p>
-<p>Attribution: <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">Rates By Exchange Rate API</a>.</p>
-<p>Please review the provider's <a href="https://www.exchangerate-api.com/terms" target="_blank" rel="noopener">Terms</a> for its service conditions.</p>
+
+<p>
+The Currency Converter uses ExchangeRate-API Open Access
+to retrieve exchange rates. It sends the selected base
+currency code in an internet request to:
+</p>
+
+<p>
+<a href="https://open.er-api.com" target="_blank" rel="noopener">
+https://open.er-api.com
+</a>
+</p>
+
+<p>
+The API provider may receive your IP address and technical
+request information as part of providing the service.
+The app does not send your calculator inputs or personal
+financial calculations to this provider.
+</p>
+
+<p>
+Exchange rates are cached locally on your device for
+up to 24 hours and may be used when the internet
+is unavailable.
+</p>
+
+<p>
+Attribution:
+<a href="https://www.exchangerate-api.com"
+target="_blank" rel="noopener">
+Rates By Exchange Rate API
+</a>.
+</p>
+
+<p>
+Please review the provider's
+<a href="https://www.exchangerate-api.com/terms"
+target="_blank" rel="noopener">
+Terms
+</a>
+for its service conditions.
+</p>
 
 <h2>4. Locally Stored Preferences and App Lock</h2>
-<p>The app stores selected currency preferences, theme settings and app-lock settings locally on your device.</p>
-<p>If you set a PIN, the app stores a salted password hash for PIN verification, not the plain-text PIN. PIN verification information remains on your device.</p>
-<p>If you use biometric authentication, verification is handled by Android. Smart Finance does not collect or store your fingerprint or other biometric data.</p>
+
+<p>
+The app stores selected currency preferences, theme
+settings and app-lock settings locally on your device.
+</p>
+
+<p>
+If you set a PIN, the app stores a salted password hash
+for PIN verification, not the plain-text PIN.
+PIN verification information remains on your device.
+</p>
+
+<p>
+If you use biometric authentication, verification is
+handled by Android. Smart Financial Calculator does not
+collect or store your fingerprint or other biometric data.
+</p>
 
 <h2>5. Feedback and Sharing</h2>
-<p>If you choose to send feedback, the app opens an email application. Your email is handled by the email service you choose. If you choose to share the app, Android's sharing interface is used.</p>
+
+<p>
+If you choose to send feedback, the app opens an email
+application. Your email is handled by the email service
+you choose. If you choose to share the app, Android's
+sharing interface is used.
+</p>
 
 <h2>6. Data Security</h2>
-<p>We use local device storage for the preferences and PIN verification information described above. You are responsible for keeping your device secure and protecting access to it.</p>
+
+<p>
+We use local device storage for the preferences and PIN
+verification information described above. You are
+responsible for keeping your device secure and protecting
+access to it.
+</p>
 
 <h2>7. Children's Privacy</h2>
-<p>Smart Finance is not designed to knowingly collect personal information from children. The app does not ask users to submit personal information for its calculator functions.</p>
+
+<p>
+Smart Financial Calculator is not designed to knowingly
+collect personal information from children. The app does
+not ask users to submit personal information for its
+calculator functions.
+</p>
 
 <h2>8. Changes to This Policy</h2>
-<p>This Privacy Policy may be updated when app features or applicable requirements change. The latest version will be published on this page.</p>
+
+<p>
+This Privacy Policy may be updated when app features
+or applicable requirements change. The latest version
+will be published on this page.
+</p>
 
 <h2>9. Contact Us</h2>
-<p>For privacy-related questions, contact us at:</p>
-<p><a href="mailto:gamestart5846@gmail.com">gamestart5846@gmail.com</a></p>
+
+<p>
+For privacy-related questions, contact us at:
+</p>
+
+<p>
+<a href="mailto:gamestart5846@gmail.com">
+gamestart5846@gmail.com
+</a>
+</p>
+
 </section>
+
+<!-- HINDI PRIVACY POLICY -->
 
 <section id="hi" class="content" hidden>
+
 <h2>1. परिचय</h2>
-<p>Smart Finance आपकी गोपनीयता का सम्मान करता है। यह नीति बताती है कि ऐप के कैलकुलेटर और अन्य सुविधाओं का उपयोग करते समय जानकारी को कैसे संभाला जाता है।</p>
+
+<p>
+Smart Financial Calculator आपकी गोपनीयता का सम्मान करता है।
+यह नीति बताती है कि ऐप के कैलकुलेटर और अन्य सुविधाओं
+का उपयोग करते समय जानकारी को कैसे संभाला जाता है।
+</p>
 
 <h2>2. जानकारी का उपयोग</h2>
-<p>कैलकुलेटर में दर्ज की गई जानकारी और वित्तीय गणनाएँ आपके डिवाइस पर ही प्रोसेस होती हैं। ऐप इन कैलकुलेशन इनपुट को हमारे सर्वर या करेंसी रेट सेवा को नहीं भेजता।</p>
-<p>ऐप में Calculation History या Cloud Backup और Restore की सुविधा उपलब्ध नहीं है।</p>
+
+<p>
+कैलकुलेटर में दर्ज की गई जानकारी और वित्तीय गणनाएँ
+आपके डिवाइस पर ही प्रोसेस होती हैं। ऐप इन कैलकुलेशन
+इनपुट को हमें या करेंसी रेट सेवा को नहीं भेजता।
+</p>
+
+<p>
+ऐप में Calculation History या Cloud Backup और Restore
+की सुविधा उपलब्ध नहीं है।
+</p>
 
 <h2>3. करेंसी कन्वर्टर और थर्ड-पार्टी सेवा</h2>
-<p>Currency Converter, ExchangeRate-API Open Access सेवा से विनिमय दरें प्राप्त करता है। इसके लिए चुनी गई Base Currency का कोड इंटरनेट अनुरोध के साथ इस सेवा को भेजा जाता है:</p>
-<p><a href="https://open.er-api.com" target="_blank" rel="noopener">https://open.er-api.com</a></p>
-<p>सेवा प्रदाता अनुरोध पूरा करने के लिए आपका IP Address और तकनीकी अनुरोध संबंधी जानकारी प्राप्त कर सकता है। ऐप आपकी कैलकुलेटर में दर्ज की गई जानकारी या व्यक्तिगत वित्तीय गणनाएँ इस प्रदाता को नहीं भेजता।</p>
-<p>विनिमय दरें आपके डिवाइस में अधिकतम 24 घंटे तक स्थानीय रूप से कैश की जाती हैं और इंटरनेट उपलब्ध न होने पर उपयोग की जा सकती हैं।</p>
-<p>Attribution: <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">Rates By Exchange Rate API</a>.</p>
-<p>सेवा की शर्तों के लिए <a href="https://www.exchangerate-api.com/terms" target="_blank" rel="noopener">Terms</a> देखें।</p>
+
+<p>
+Currency Converter, ExchangeRate-API Open Access सेवा
+से विनिमय दरें प्राप्त करता है। इसके लिए चुनी गई
+Base Currency का कोड इंटरनेट अनुरोध के साथ इस सेवा
+को भेजा जाता है:
+</p>
+
+<p>
+<a href="https://open.er-api.com"
+target="_blank" rel="noopener">
+https://open.er-api.com
+</a>
+</p>
+
+<p>
+सेवा प्रदाता अनुरोध पूरा करने के लिए आपका IP Address
+और तकनीकी अनुरोध संबंधी जानकारी प्राप्त कर सकता है।
+ऐप आपकी कैलकुलेटर में दर्ज की गई जानकारी या व्यक्तिगत
+वित्तीय गणनाएँ इस प्रदाता को नहीं भेजता।
+</p>
+
+<p>
+विनिमय दरें आपके डिवाइस में अधिकतम 24 घंटे तक
+स्थानीय रूप से कैश की जाती हैं और इंटरनेट उपलब्ध
+न होने पर उपयोग की जा सकती हैं।
+</p>
+
+<p>
+Attribution:
+<a href="https://www.exchangerate-api.com"
+target="_blank" rel="noopener">
+Rates By Exchange Rate API
+</a>.
+</p>
+
+<p>
+सेवा की शर्तों के लिए
+<a href="https://www.exchangerate-api.com/terms"
+target="_blank" rel="noopener">
+Terms
+</a>
+देखें।
+</p>
 
 <h2>4. डिवाइस में सेव सेटिंग्स और App Lock</h2>
-<p>ऐप आपकी चुनी हुई करेंसी, थीम और App Lock की सेटिंग्स आपके डिवाइस में स्थानीय रूप से सेव करता है।</p>
-<p>यदि आप PIN सेट करते हैं, तो ऐप सादे PIN के बजाय Salted PIN Hash सेव करता है। PIN की जाँच से संबंधित जानकारी आपके डिवाइस पर ही रहती है।</p>
-<p>Biometric Authentication की जाँच Android द्वारा की जाती है। Smart Finance आपका Fingerprint या अन्य Biometric Data एकत्र या सेव नहीं करता।</p>
+
+<p>
+ऐप आपकी चुनी हुई करेंसी, थीम और App Lock की
+सेटिंग्स आपके डिवाइस में स्थानीय रूप से सेव करता है।
+</p>
+
+<p>
+यदि आप PIN सेट करते हैं, तो ऐप सादे PIN के बजाय
+Salted PIN Hash सेव करता है। PIN की जाँच से संबंधित
+जानकारी आपके डिवाइस पर ही रहती है।
+</p>
+
+<p>
+Biometric Authentication की जाँच Android द्वारा
+की जाती है। Smart Financial Calculator आपका Fingerprint
+या अन्य Biometric Data एकत्र या सेव नहीं करता।
+</p>
 
 <h2>5. Feedback और Sharing</h2>
-<p>Feedback भेजने पर ऐप ईमेल एप्लिकेशन खोलता है। आपका ईमेल आपके चुने हुए ईमेल सेवा प्रदाता द्वारा संभाला जाता है। ऐप शेयर करने पर Android का Sharing Interface उपयोग होता है।</p>
+
+<p>
+Feedback भेजने पर ऐप ईमेल एप्लिकेशन खोलता है।
+आपका ईमेल आपके चुने हुए ईमेल सेवा प्रदाता द्वारा
+संभाला जाता है। ऐप शेयर करने पर Android का
+Sharing Interface उपयोग होता है।
+</p>
 
 <h2>6. डेटा सुरक्षा</h2>
-<p>ऊपर बताई गई सेटिंग्स और PIN सत्यापन संबंधी जानकारी डिवाइस में स्थानीय रूप से सेव होती है। अपने डिवाइस की सुरक्षा और उस तक पहुँच को सुरक्षित रखना आपकी जिम्मेदारी है।</p>
+
+<p>
+ऊपर बताई गई सेटिंग्स और PIN सत्यापन संबंधी जानकारी
+डिवाइस में स्थानीय रूप से सेव होती है। अपने डिवाइस
+की सुरक्षा और उस तक पहुँच को सुरक्षित रखना
+आपकी जिम्मेदारी है।
+</p>
 
 <h2>7. बच्चों की गोपनीयता</h2>
-<p>Smart Finance बच्चों से व्यक्तिगत जानकारी जानबूझकर एकत्र करने के लिए नहीं बनाया गया है। ऐप के कैलकुलेटर उपयोग के लिए व्यक्तिगत जानकारी जमा करने की आवश्यकता नहीं है।</p>
+
+<p>
+Smart Financial Calculator बच्चों से व्यक्तिगत जानकारी
+जानबूझकर एकत्र करने के लिए नहीं बनाया गया है।
+ऐप के कैलकुलेटर उपयोग के लिए व्यक्तिगत जानकारी
+जमा करने की आवश्यकता नहीं है।
+</p>
 
 <h2>8. नीति में बदलाव</h2>
-<p>ऐप की सुविधाओं या लागू आवश्यकताओं में बदलाव होने पर इस Privacy Policy को अपडेट किया जा सकता है। इसका नवीनतम संस्करण इसी पेज पर उपलब्ध होगा।</p>
+
+<p>
+ऐप की सुविधाओं या लागू आवश्यकताओं में बदलाव होने
+पर इस Privacy Policy को अपडेट किया जा सकता है।
+इसका नवीनतम संस्करण इसी पेज पर उपलब्ध होगा।
+</p>
 
 <h2>9. संपर्क</h2>
-<p>गोपनीयता से जुड़े सवालों के लिए संपर्क करें:</p>
-<p><a href="mailto:gamestart5846@gmail.com">gamestart5846@gmail.com</a></p>
+
+<p>
+गोपनीयता से जुड़े सवालों के लिए संपर्क करें:
+</p>
+
+<p>
+<a href="mailto:gamestart5846@gmail.com">
+gamestart5846@gmail.com
+</a>
+</p>
+
 </section>
+
 </main>
 
 <script>
-function show(lang){
-document.getElementById('en').hidden = lang !== 'en';
-document.getElementById('hi').hidden = lang !== 'hi';
-document.documentElement.lang = lang;
+function show(lang) {
+    document.getElementById('en').hidden = lang !== 'en';
+    document.getElementById('hi').hidden = lang !== 'hi';
+    document.documentElement.lang = lang;
 }
 </script>
+
 </body>
 </html>
