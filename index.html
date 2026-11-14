@@ -7,9 +7,7 @@
 <title>Smart Financial Calculator - Privacy Policy</title>
 
 <style>
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -33,23 +31,15 @@ header, .content {
     margin-bottom: 18px;
 }
 
-h1 {
+h1, h2 {
     color: #35D39A;
-    margin: 0;
 }
 
-h2 {
-    color: #35D39A;
-    margin-top: 26px;
-}
+h1 { margin: 0; }
+h2 { margin-top: 26px; }
 
-p, li {
-    color: #D1DEE4;
-}
-
-a {
-    color: #65C9FF;
-}
+p, li { color: #D1DEE4; }
+a { color: #65C9FF; }
 
 button {
     background: #35D39A;
@@ -67,25 +57,19 @@ button {
     font-size: 14px;
 }
 
-[hidden] {
-    display: none !important;
-}
+[hidden] { display: none !important; }
 
 @media(max-width:600px) {
     main {
         margin: 10px auto;
         padding: 12px;
     }
-
-    header, .content {
-        padding: 18px;
-    }
+    header, .content { padding: 18px; }
 }
 </style>
 </head>
 
 <body>
-
 <main>
 
 <header>
@@ -95,7 +79,7 @@ button {
     <button type="button" onclick="show('en')">English</button>
     <button type="button" onclick="show('hi')">हिन्दी</button>
 
-    <p class="small">Last Updated: November 12, 2026</p>
+    <p class="small">Last Updated: November 14, 2026</p>
 </header>
 
 <!-- ENGLISH PRIVACY POLICY -->
@@ -123,12 +107,30 @@ The app does not provide Calculation History or
 Cloud Backup and Restore features.
 </p>
 
+<p>
+The current version does not include third-party
+advertising SDKs or analytics SDKs.
+</p>
+
 <h2>3. Currency Converter and Third-Party Service</h2>
 
 <p>
-The Currency Converter uses ExchangeRate-API Open Access
-to retrieve exchange rates. It sends the selected base
-currency code in an internet request to:
+The Currency Converter uses ExchangeRate-API to retrieve
+exchange rates. The app provides five free Currency Converter
+uses per device. After the five free uses, you need to add
+your own ExchangeRate-API key to continue using the converter.
+</p>
+
+<p>
+The five-use allowance is stored locally on your device.
+Clearing app data or reinstalling the app may reset this
+local counter. This free-use allowance is separate from
+the API provider's own monthly request quota.
+</p>
+
+<p>
+Without a personal API key, the app may use the
+ExchangeRate-API Open Access endpoint:
 </p>
 
 <p>
@@ -138,16 +140,56 @@ https://open.er-api.com
 </p>
 
 <p>
-The API provider may receive your IP address and technical
-request information as part of providing the service.
-The app does not send your calculator inputs or personal
-financial calculations to this provider.
+If you add your own API key, the app stores it in the
+private SharedPreferences storage of your Android app.
+The key is not encrypted by the app. It is sent to
+ExchangeRate-API over HTTPS using an Authorization:
+Bearer header when making authenticated requests.
 </p>
 
 <p>
-Exchange rates are cached locally on your device for
-up to 24 hours and may be used when the internet
-is unavailable.
+For authenticated requests, the API key and requested
+currency information are sent to ExchangeRate-API.
+The provider may also receive your IP address and
+technical request information.
+</p>
+
+<p>
+ExchangeRate-API may apply its own monthly usage limits
+or account restrictions. Reaching the provider's quota
+may prevent further API requests even if the app's
+five-free-use allowance has already been passed or
+a personal API key has been added.
+</p>
+
+<p>
+Exchange rates used by the Currency Converter are cached
+locally on your device for up to 24 hours. Cached rates
+may be used when an internet connection is unavailable.
+Rates may therefore not always be real-time.
+</p>
+
+<h2>4. Dashboard Currency Rate</h2>
+
+<p>
+The dashboard may display an USD-to-INR exchange rate
+retrieved from ExchangeRate-API. This dashboard rate
+uses a separate local cache and is independent of the
+Currency Converter's five-free-use counter.
+</p>
+
+<p>
+The dashboard rate is cached for up to 24 hours.
+Under normal operation, the app attempts to refresh
+this rate no more than once within a 24-hour period.
+The displayed rate may be up to 24 hours old and
+should not be considered a guaranteed live rate.
+</p>
+
+<p>
+If an API key is configured, the dashboard may use it
+for the rate request. Otherwise, it may use the
+Open Access service where available.
 </p>
 
 <p>
@@ -161,17 +203,20 @@ Rates By Exchange Rate API
 <p>
 Please review the provider's
 <a href="https://www.exchangerate-api.com/terms"
-target="_blank" rel="noopener">
-Terms
-</a>
-for its service conditions.
+target="_blank" rel="noopener">Terms</a>
+for its service conditions and
+<a href="https://www.exchangerate-api.com"
+target="_blank" rel="noopener">website</a>
+for further information.
 </p>
 
-<h2>4. Locally Stored Preferences and App Lock</h2>
+<h2>5. Locally Stored Preferences and App Lock</h2>
 
 <p>
 The app stores selected currency preferences, theme
-settings and app-lock settings locally on your device.
+settings, API key (if provided), local usage counter,
+cached exchange rates and app-lock settings locally
+on your device.
 </p>
 
 <p>
@@ -186,7 +231,7 @@ handled by Android. Smart Financial Calculator does not
 collect or store your fingerprint or other biometric data.
 </p>
 
-<h2>5. Feedback and Sharing</h2>
+<h2>6. Feedback and Sharing</h2>
 
 <p>
 If you choose to send feedback, the app opens an email
@@ -195,16 +240,17 @@ you choose. If you choose to share the app, Android's
 sharing interface is used.
 </p>
 
-<h2>6. Data Security</h2>
+<h2>7. Data Security</h2>
 
 <p>
-We use local device storage for the preferences and PIN
-verification information described above. You are
+The app uses private local device storage for the
+preferences and information described above. The API
+key, if saved, is not encrypted by the app. You are
 responsible for keeping your device secure and protecting
 access to it.
 </p>
 
-<h2>7. Children's Privacy</h2>
+<h2>8. Children's Privacy</h2>
 
 <p>
 Smart Financial Calculator is not designed to knowingly
@@ -213,7 +259,17 @@ not ask users to submit personal information for its
 calculator functions.
 </p>
 
-<h2>8. Changes to This Policy</h2>
+<h2>9. Financial Information Disclaimer</h2>
+
+<p>
+The calculators provide estimates for informational
+purposes only. Results may vary depending on assumptions,
+rounding and actual financial product terms. The app
+does not provide financial, investment, tax or legal advice.
+Please verify important decisions independently.
+</p>
+
+<h2>10. Changes to This Policy</h2>
 
 <p>
 This Privacy Policy may be updated when app features
@@ -221,7 +277,7 @@ or applicable requirements change. The latest version
 will be published on this page.
 </p>
 
-<h2>9. Contact Us</h2>
+<h2>11. Contact Us</h2>
 
 <p>
 For privacy-related questions, contact us at:
@@ -260,13 +316,32 @@ Smart Financial Calculator आपकी गोपनीयता का सम�
 की सुविधा उपलब्ध नहीं है।
 </p>
 
+<p>
+ऐप के वर्तमान संस्करण में थर्ड-पार्टी विज्ञापन SDK
+या Analytics SDK शामिल नहीं हैं।
+</p>
+
 <h2>3. करेंसी कन्वर्टर और थर्ड-पार्टी सेवा</h2>
 
 <p>
-Currency Converter, ExchangeRate-API Open Access सेवा
-से विनिमय दरें प्राप्त करता है। इसके लिए चुनी गई
-Base Currency का कोड इंटरनेट अनुरोध के साथ इस सेवा
-को भेजा जाता है:
+Currency Converter, ExchangeRate-API से विनिमय दरें
+प्राप्त करता है। प्रत्येक डिवाइस पर पहले पाँच बार
+Currency Converter का उपयोग मुफ्त है। पाँच मुफ्त
+उपयोग पूरे होने के बाद कन्वर्टर जारी रखने के लिए
+आपको अपनी ExchangeRate-API Key जोड़नी होगी।
+</p>
+
+<p>
+पाँच उपयोगों की गिनती आपके डिवाइस पर स्थानीय रूप से
+सेव होती है। ऐप का डेटा Clear करने या ऐप दोबारा
+इंस्टॉल करने पर यह स्थानीय गिनती रीसेट हो सकती है।
+यह मुफ्त उपयोग सीमा API प्रदाता की मासिक Request
+Limit से अलग है।
+</p>
+
+<p>
+अपनी API Key न होने पर ऐप उपलब्धता के अनुसार
+ExchangeRate-API Open Access सेवा का उपयोग कर सकता है:
 </p>
 
 <p>
@@ -277,16 +352,57 @@ https://open.er-api.com
 </p>
 
 <p>
-सेवा प्रदाता अनुरोध पूरा करने के लिए आपका IP Address
-और तकनीकी अनुरोध संबंधी जानकारी प्राप्त कर सकता है।
-ऐप आपकी कैलकुलेटर में दर्ज की गई जानकारी या व्यक्तिगत
-वित्तीय गणनाएँ इस प्रदाता को नहीं भेजता।
+यदि आप अपनी API Key जोड़ते हैं, तो ऐप इसे Android
+के निजी SharedPreferences Storage में सेव करता है।
+ऐप इस Key को Encrypt नहीं करता। प्रमाणित API Request
+के समय यह Key HTTPS के माध्यम से Authorization:
+Bearer Header में ExchangeRate-API को भेजी जाती है।
 </p>
 
 <p>
-विनिमय दरें आपके डिवाइस में अधिकतम 24 घंटे तक
-स्थानीय रूप से कैश की जाती हैं और इंटरनेट उपलब्ध
-न होने पर उपयोग की जा सकती हैं।
+प्रमाणित अनुरोधों में API Key और मांगी गई करेंसी
+की जानकारी ExchangeRate-API को भेजी जाती है।
+सेवा प्रदाता आपका IP Address और तकनीकी अनुरोध
+संबंधी जानकारी भी प्राप्त कर सकता है।
+</p>
+
+<p>
+ExchangeRate-API की अपनी मासिक उपयोग सीमा और
+Account Restrictions हो सकती हैं। प्रदाता की
+मासिक सीमा पूरी होने पर API अनुरोध बंद हो सकते हैं,
+भले ही ऐप की पाँच मुफ्त उपयोग सीमा पूरी हो चुकी हो
+या आपने अपनी API Key जोड़ रखी हो।
+</p>
+
+<p>
+Currency Converter की विनिमय दरें आपके डिवाइस में
+अधिकतम 24 घंटे तक स्थानीय रूप से कैश की जाती हैं।
+इंटरनेट उपलब्ध न होने पर पुरानी कैश की गई दरें
+उपयोग की जा सकती हैं। इसलिए दरें हमेशा Real-time
+होना जरूरी नहीं है।
+</p>
+
+<h2>4. Dashboard की Currency Rate</h2>
+
+<p>
+Dashboard पर ExchangeRate-API से प्राप्त USD-to-INR
+विनिमय दर दिखाई जा सकती है। Dashboard की इस दर के लिए
+अलग Local Cache उपयोग होता है। यह Currency Converter
+की पाँच मुफ्त उपयोग सीमा में शामिल नहीं है।
+</p>
+
+<p>
+Dashboard की दर अधिकतम 24 घंटे तक कैश रहती है।
+सामान्य स्थिति में ऐप 24 घंटे के भीतर इस दर को
+एक बार से अधिक Refresh करने का प्रयास नहीं करता।
+इसलिए दिखाई गई दर 24 घंटे तक पुरानी हो सकती है
+और इसे निश्चित Live Rate नहीं मानना चाहिए।
+</p>
+
+<p>
+यदि आपने API Key जोड़ी है, तो Dashboard दर प्राप्त
+करने के लिए उसका उपयोग कर सकता है। अन्यथा उपलब्धता
+के अनुसार Open Access सेवा का उपयोग किया जा सकता है।
 </p>
 
 <p>
@@ -300,17 +416,19 @@ Rates By Exchange Rate API
 <p>
 सेवा की शर्तों के लिए
 <a href="https://www.exchangerate-api.com/terms"
-target="_blank" rel="noopener">
-Terms
-</a>
+target="_blank" rel="noopener">Terms</a>
+और अधिक जानकारी के लिए
+<a href="https://www.exchangerate-api.com"
+target="_blank" rel="noopener">वेबसाइट</a>
 देखें।
 </p>
 
-<h2>4. डिवाइस में सेव सेटिंग्स और App Lock</h2>
+<h2>5. डिवाइस में सेव सेटिंग्स और App Lock</h2>
 
 <p>
-ऐप आपकी चुनी हुई करेंसी, थीम और App Lock की
-सेटिंग्स आपके डिवाइस में स्थानीय रूप से सेव करता है।
+ऐप चुनी हुई करेंसी, थीम सेटिंग्स, यदि दी गई हो तो
+API Key, स्थानीय उपयोग गिनती, कैश की गई विनिमय दरें
+और App Lock की सेटिंग्स आपके डिवाइस में सेव करता है।
 </p>
 
 <p>
@@ -325,7 +443,7 @@ Biometric Authentication की जाँच Android द्वारा
 या अन्य Biometric Data एकत्र या सेव नहीं करता।
 </p>
 
-<h2>5. Feedback और Sharing</h2>
+<h2>6. Feedback और Sharing</h2>
 
 <p>
 Feedback भेजने पर ऐप ईमेल एप्लिकेशन खोलता है।
@@ -334,16 +452,16 @@ Feedback भेजने पर ऐप ईमेल एप्लिकेशन 
 Sharing Interface उपयोग होता है।
 </p>
 
-<h2>6. डेटा सुरक्षा</h2>
+<h2>7. डेटा सुरक्षा</h2>
 
 <p>
-ऊपर बताई गई सेटिंग्स और PIN सत्यापन संबंधी जानकारी
-डिवाइस में स्थानीय रूप से सेव होती है। अपने डिवाइस
-की सुरक्षा और उस तक पहुँच को सुरक्षित रखना
-आपकी जिम्मेदारी है।
+ऐप ऊपर बताई गई सेटिंग्स और जानकारी को डिवाइस के
+निजी Local Storage में रखता है। यदि API Key सेव है,
+तो ऐप उसे Encrypt नहीं करता। अपने डिवाइस की सुरक्षा
+और उस तक पहुँच को सुरक्षित रखना आपकी जिम्मेदारी है।
 </p>
 
-<h2>7. बच्चों की गोपनीयता</h2>
+<h2>8. बच्चों की गोपनीयता</h2>
 
 <p>
 Smart Financial Calculator बच्चों से व्यक्तिगत जानकारी
@@ -352,7 +470,18 @@ Smart Financial Calculator बच्चों से व्यक्तिगत
 जमा करने की आवश्यकता नहीं है।
 </p>
 
-<h2>8. नीति में बदलाव</h2>
+<h2>9. वित्तीय जानकारी संबंधी अस्वीकरण</h2>
+
+<p>
+ऐप के कैलकुलेटर केवल जानकारी और अनुमान के उद्देश्य
+से परिणाम देते हैं। वास्तविक परिणाम मान्यताओं,
+Rounding और वित्तीय उत्पादों की वास्तविक शर्तों
+के अनुसार अलग हो सकते हैं। ऐप वित्तीय, निवेश,
+टैक्स या कानूनी सलाह नहीं देता। महत्वपूर्ण निर्णय
+लेने से पहले जानकारी की स्वतंत्र रूप से पुष्टि करें।
+</p>
+
+<h2>10. नीति में बदलाव</h2>
 
 <p>
 ऐप की सुविधाओं या लागू आवश्यकताओं में बदलाव होने
@@ -360,7 +489,7 @@ Smart Financial Calculator बच्चों से व्यक्तिगत
 इसका नवीनतम संस्करण इसी पेज पर उपलब्ध होगा।
 </p>
 
-<h2>9. संपर्क</h2>
+<h2>11. संपर्क</h2>
 
 <p>
 गोपनीयता से जुड़े सवालों के लिए संपर्क करें:
